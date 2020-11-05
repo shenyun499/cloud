@@ -1,0 +1,5 @@
+com\xue\springcloud\client\DeptServiceClientFallbackFactory.class
+com\xue\springcloud\client\DeptServiceClient.class
+com\xue\springcloud\entity\DeptDO.class
+com\xue\springcloud\App.class
+com\xue\springcloud\client\DeptServiceClientFallbackFactory$1.class

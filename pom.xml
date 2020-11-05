@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.xue.springcloud</groupId>
+    <artifactId>cloudtest</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>cloud-api</module>
+        <module>cloud-provider-dept</module>
+        <module>cloud-consumer-dept</module>
+        <module>cloud-eureka-server</module>
+        <module>cloud-provider-dept2</module>
+    </modules>
+
+    <packaging>pom</packaging>
+    <name>cloudtest</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <spring-cloud.version>Dalston.SR1</spring-cloud.version>
+        <spring-boot.version>1.5.9.RELEASE</spring-boot.version>
+        <mysql.version>6.0.6</mysql.version>
+        <junit.version>4.12</junit.version>
+        <log4j.version>1.2.17</log4j.version>
+        <mybatis.version>2.0.0</mybatis.version>
+        <druid.version>1.1.10</druid.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <!-- 加入阿里巴巴连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+    <build>
+        <!-- info信息完善，eureka的服务点进去有信息显示-->
+        <!--<finalName>cloudtest</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>-->
+
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <!-- info信息完善，eureka的服务点进去有信息显示-->
+            <!--<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimit>@</delimit>
+                    </delimiters>
+                </configuration>
+            </plugin>-->
+        </plugins>
+
+    </build>
+</project>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.xue.springcloud</groupId>
+    <artifactId>cloudtest</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>cloud-provider-dept</artifactId>
+  <name>cloud-provider-dept</name>
+  <packaging>jar</packaging>
+
+  <dependencies>
+    <!-- eureka-client端 -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-eureka</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-config</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-config-server</artifactId>
+    </dependency>
+
+    <!-- 引入熔断器依赖Hystrix -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-hystrix</artifactId>
+    </dependency>
+
+    <!--引入api-->
+    <dependency>
+      <groupId>com.xue.springcloud</groupId>
+      <artifactId>cloud-api</artifactId>
+      <!--指活的版本，总的pom文件更新它也更新-->
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+
+    <!--boot相关-->
+    <!-- eureka提示 info信息  -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    <!-- 加入阿里巴巴连接池 -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid-spring-boot-starter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.mybatis.spring.boot</groupId>
+      <artifactId>mybatis-spring-boot-starter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jetty</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+
+    <!--cloud-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-context</artifactId>
+    </dependency>
+
+    <!--热部署-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>springloaded</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>

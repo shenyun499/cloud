@@ -1,0 +1,21 @@
+spring:
+  #服务名称
+  application:
+    name: cloud-provider-dept
+
+  #禁用thymeleaf
+  thymeleaf:
+    cache: false
+
+  #热部署生效
+  devtools:
+    restart:
+      enabled: true
+
+#服务启动端口号
+server:
+  port: 8001
+
+
+
+#微服务特有启动配置文件，需要引入spring-cloud-context才能使用。作用：一般配置启动共有信息

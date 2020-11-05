@@ -1,0 +1,16 @@
+spring:
+#指定dev文件启动
+  profiles:
+    active: dev
+
+#redis配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: essm123456
+    database: 0
+
+#mybatis配置
+mybatis:
+  mapperLocations: classpath*:mapper/**/*.xml
+  typeAliasesPackage: com.xue.springcloud
