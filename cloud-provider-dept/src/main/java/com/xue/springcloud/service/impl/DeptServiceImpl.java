@@ -16,7 +16,7 @@ import java.util.List;
  */
 @Transactional(rollbackFor = Exception.class)
 @Service("deptService") 
-public class DeptServiceImpl implements DeptService{
+public class DeptServiceImpl implements DeptService {
 	
     @Autowired
     private DeptDao deptDao;

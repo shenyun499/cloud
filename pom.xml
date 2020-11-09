@@ -13,6 +13,7 @@
         <module>cloud-consumer-dept</module>
         <module>cloud-eureka-server</module>
         <module>cloud-provider-dept2</module>
+        <module>cloud-zuul</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -89,10 +90,10 @@
         </resources>-->
 
         <plugins>
-            <plugin>
+            <!--<plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+            </plugin>-->
 
             <!-- info信息完善，eureka的服务点进去有信息显示-->
             <!--<plugin>

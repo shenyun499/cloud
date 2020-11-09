@@ -58,9 +58,14 @@ public class DeptController {
     @RequestMapping(value = "/getDeptInfo2/{id}")
     public DeptDO getDept2(@PathVariable("id") Long id) {
         DeptDO deptDO = deptService.getDept(id);
+        /*try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         if (deptDO == null) {
             throw new RuntimeException();
-        }
+        }*/
         return deptDO;
     }
 
