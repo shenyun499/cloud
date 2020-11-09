@@ -6,3 +6,7 @@ eureka:
     fetch-registry: false #false 表示自己就是端就是注册中心，职责是去维护服务实例，不需要去检索服务
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #设置server与client交互地址
+
+  server:
+    enable-self-preservation: false #开发环境关闭自我保护机制，保证不可用的服务及时剔除
+    eviction-interval-timer-in-ms: 2000 #设置euerka server清除无效节点的间隔时间2s 不设置默认是60s清除

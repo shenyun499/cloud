@@ -51,6 +51,9 @@ eureka:
   instance:
     instance-id: provider-dept:8001 #服务别名配置
     prefer-ip-address: true #访问可以显示ip地址
+    lease-renewal-interval-in-seconds: 1 #eureka client发送心跳给server端的频率
+    lease-expiration-duration-in-seconds: 2 #eureka server至上一次收到client的心跳之后，等待下一次心跳的超时时间，在这个时间内若没收到下一次心跳，则将移除该instance
+
 
 #info:
 #  app.name: provider-dept:8001
