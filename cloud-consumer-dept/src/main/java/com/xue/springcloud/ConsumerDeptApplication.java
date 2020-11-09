@@ -12,7 +12,6 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-@EnableCircuitBreaker
 public class ConsumerDeptApplication {
 
     public static void main(String[] args) {

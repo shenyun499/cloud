@@ -45,6 +45,10 @@ public class DeptController {
     @ResponseBody
     @RequestMapping(value = "/listDeptInfo2/{id}")
     public DeptDO deptDOListInfo(@PathVariable("id") Long id) {
-        return deptServiceClient.getDept2(id);
+        long start = System.currentTimeMillis();
+        DeptDO dept2 = deptServiceClient.getDept2(id);
+        System.out.println((System.currentTimeMillis() - start));
+        
+        return dept2;
     }
 }
