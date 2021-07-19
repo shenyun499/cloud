@@ -1,4 +1,7 @@
-D:\hisun_project\cloudtest\cloud-api\src\main\java\com\xue\springcloud\client\DeptServiceClientFallbackFactory.java
-D:\hisun_project\cloudtest\cloud-api\src\main\java\com\xue\springcloud\App.java
-D:\hisun_project\cloudtest\cloud-api\src\main\java\com\xue\springcloud\entity\DeptDO.java
-D:\hisun_project\cloudtest\cloud-api\src\main\java\com\xue\springcloud\client\DeptServiceClient.java
+D:\myproject\springcloud1\cloud-api\src\main\java\com\xue\springcloud\config\WebFilter.java
+D:\myproject\springcloud1\cloud-api\src\main\java\com\xue\springcloud\App.java
+D:\myproject\springcloud1\cloud-api\src\main\java\com\xue\springcloud\config\WebApplicationContextUitl.java
+D:\myproject\springcloud1\cloud-api\src\main\java\com\xue\springcloud\config\InjectWebFilter.java
+D:\myproject\springcloud1\cloud-api\src\main\java\com\xue\springcloud\entity\DeptDO.java
+D:\myproject\springcloud1\cloud-api\src\main\java\com\xue\springcloud\client\DeptServiceClient.java
+D:\myproject\springcloud1\cloud-api\src\main\java\com\xue\springcloud\client\DeptServiceClientFallbackFactory.java
