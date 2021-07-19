@@ -1,10 +1,10 @@
 spring:
   #redis配置
-  redis:
-    host: 127.0.0.1
-    port: 6379
-    password: essm123456
-    database: 0
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    password: essm123456
+#    database: 0
 
   #数据源配置
   datasource:

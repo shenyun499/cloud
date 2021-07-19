@@ -3,9 +3,8 @@ package com.xue.springcloud.controller;
 import com.xue.springcloud.entity.DeptDO;
 import com.xue.springcloud.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -25,6 +24,11 @@ public class DeptController {
     @RequestMapping(value = "/listDeptInfo")
     public List<DeptDO> findAll() {
         System.out.println("ss");
+        return deptService.findAll();
+    }
+
+    @GetMapping(value = "/getDept")
+    public List<DeptDO> getDept() {
         return deptService.findAll();
     }
 }

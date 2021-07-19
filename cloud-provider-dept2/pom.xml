@@ -36,6 +36,12 @@
       <version>${project.version}</version>
     </dependency>
 
+    <!-- 引入熔断器依赖Hystrix -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-hystrix</artifactId>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
